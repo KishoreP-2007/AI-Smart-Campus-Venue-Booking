@@ -62,7 +62,8 @@ function renderRequests(status) {
       Date: ${r.date}<br>
       Time: ${r.startTime} - ${r.endTime}<br>
       Participants: ${r.participants}<br>
-      Venue: ${r.suggestedVenue}
+      Venue: ${r.suggestedVenue}<br>
+      Requested by: ${r.requestedBy}
 
       <div class="button-group">
         ${actionButtons(r.docId, state)}
@@ -125,3 +126,4 @@ window.goBack = function () {
 
 // Initial load
 loadRequests();
+
