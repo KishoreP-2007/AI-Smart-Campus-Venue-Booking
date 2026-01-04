@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manage Venues</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <h2>Manage Venues</h2>
+  <button class="logout-btn" onclick="goBack()">← Back</button>
+</div>
+
+<div class="dashboard">
+
+  <!-- ADD VENUE CARD -->
+  <div class="dashboard-card">
+    <h3>Add New Venue</h3>
+
+    <input id="venueId" placeholder="Venue ID (A-CR-1)">
+    <input id="block" placeholder="Block (A/B/C)">
+    <input id="type" placeholder="Type (classroom / lab / hall)">
+    <input id="capacity" type="number" placeholder="Capacity">
+
+    <div class="center-btn">
+      <button onclick="addVenue()">Add Venue</button>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- VIEW VENUES CARD -->
+  <div class="dashboard-card">
+    <h3>View Venues</h3>
+    <p class="subtitle">Block-wise venue management</p>
+
+    <div class="split-layout">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h3>Blocks</h3>
+        <button class="outline small" onclick="filterBlock('ALL')">All</button>
+        <button class="outline small" onclick="filterBlock('A')">Block A</button>
+        <button class="outline small" onclick="filterBlock('B')">Block B</button>
+        <button class="outline small" onclick="filterBlock('C')">Block C</button>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <h3>Venues</h3>
+        <div id="venueList"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="admin_venues.js"></script>
+</body>
+</html>

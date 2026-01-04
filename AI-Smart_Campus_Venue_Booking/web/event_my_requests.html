@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Venue Requests</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <h2>My Requests</h2>
+  <button class="logout-btn" onclick="goBack()">← Back</button>
+</div>
+
+<div class="dashboard">
+
+  <div class="dashboard-card">
+    <h3>My Venue Requests</h3>
+    <p class="subtitle">Track the status of your requests</p>
+
+    <div class="split-layout">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h4>Status</h4>
+        <button class="outline small" onclick="filterStatus('ALL')">All</button>
+        <button class="outline small" onclick="filterStatus('pending')">Pending</button>
+        <button class="outline small" onclick="filterStatus('approved')">Approved</button>
+        <button class="outline small" onclick="filterStatus('rejected')">Rejected</button>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <ul id="requestList"></ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="event_my_requests.js"></script>
+</body>
+</html>

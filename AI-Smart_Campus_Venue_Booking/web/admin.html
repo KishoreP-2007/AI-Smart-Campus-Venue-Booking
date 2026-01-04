@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="s.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <header class="top-bar">
+    <h2> AI-Smart Campus Venue Booking</h2>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </header>
+
+  <main class="dashboard">
+    <h1>Admin Dashboard</h1>
+    <p class="subtitle">Manage campus venues, schedules & users</p>
+
+    <div class="card-grid">
+
+      <div class="dashboard-card" onclick="location.href='admin_requests.html'">
+        <span class="material-icons">📝</span>
+        <h3>Venue Requests</h3>
+        <p>Approve or reject event requests</p>
+      </div>
+
+      <div class="dashboard-card" onclick="location.href='admin_venues.html'">
+        <span class="material-icons">🏫</span>
+        <h3>Manage Venues</h3>
+        <p>Add, edit or remove venues</p>
+      </div>
+
+      <div class="dashboard-card" onclick="location.href='admin_classes.html'">
+        <span class="material-icons">🕑</span>
+        <h3>Regular Classes</h3>
+        <p>Manage regular class schedules</p>
+      </div>
+
+      <div class="dashboard-card" onclick="location.href='admin_users.html'">
+        <span class="material-icons">👤</span>
+        <h3>Event Team Users</h3>
+        <p>Create & manage event users</p>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

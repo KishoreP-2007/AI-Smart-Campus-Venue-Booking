@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Team Dashboard</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <h2>Event Team Dashboard</h2>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<div class="dashboard">
+
+  <h1>Welcome, Event Team</h1>
+  <p class="subtitle">Request venues and track approval status</p>
+
+  <!-- DASHBOARD CARDS -->
+  <div class="card-grid">
+
+    <!-- CREATE REQUEST -->
+    <div class="dashboard-card" onclick="goCreateRequest()">
+      <span>📝</span>
+      <h3>New Venue Request</h3>
+      <p>Create a new event venue request</p>
+    </div>
+
+    <!-- VIEW REQUESTS -->
+    <div class="dashboard-card" onclick="goMyRequests()">
+      <span>📊</span>
+      <h3>My Requests</h3>
+      <p>Track pending & approved requests</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="event_dashboard.js"></script>
+</body>
+</html>

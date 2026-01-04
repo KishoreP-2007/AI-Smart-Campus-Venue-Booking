@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Venue Request</title>
+  <link rel="stylesheet" href="s.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <style>
+    /* Added some simple CSS for the labels so they look good immediately */
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box; /* Ensures padding doesn't break width */
+    }
+    .row {
+      display: flex;
+      gap: 15px;
+    }
+    .col {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <h2>New Venue Request</h2>
+  <button class="logout-btn" onclick="goBack()">← Back</button>
+</div>
+
+<div class="dashboard">
+  <div class="dashboard-card">
+    <h3>Event Details</h3>
+    <p class="subtitle">Please fill in the required information below</p>
+
+    <label for="eventName">Event Name</label>
+    <input id="eventName" type="text" placeholder="e.g., AI Workshop, Dept Meeting">
+
+    <div class="row">
+      <div class="col">
+        <label for="eventDate">Date</label>
+        <input id="eventDate" type="date">
+      </div>
+      <div class="col">
+        <label for="participants">Participants</label>
+        <input id="participants" type="number" placeholder="e.g., 60">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col">
+        <label for="startTime">Start Time</label>
+        <input id="startTime" type="time">
+      </div>
+      <div class="col">
+        <label for="endTime">End Time</label>
+        <input id="endTime" type="time">
+      </div>
+    </div>
+
+    <div class="center-btn">
+      <button class="outline" id="suggestBtn" onclick="suggestVenueWithAI()">
+        <i class="fas fa-magic"></i> Ask AI to Recommend Venue
+      </button>
+    </div>
+
+    <div id="loadingIndicator" style="display:none; text-align:center; color:#666; margin:10px;">
+      <i class="fas fa-spinner fa-spin"></i> Checking schedules & analyzing...
+    </div>
+    
+    <div id="aiReasoning" style="margin: 10px 0; padding: 10px; background: #e3f2fd; border-radius: 5px; display: none; color: #0d47a1; font-size: 0.9rem;"></div>
+
+    <div id="suggestedVenueList"></div>
+
+    <div class="center-btn" style="margin-top:20px;">
+      <button onclick="submitRequest()">Submit Request</button>
+    </div>
+
+    <p id="msg"></p>
+  </div>
+</div>
+
+<script type="module" src="event_request.js"></script>
+</body>
+</html>

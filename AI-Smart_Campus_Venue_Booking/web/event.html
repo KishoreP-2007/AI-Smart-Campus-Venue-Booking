@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Dashboard</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+<div class="page-container">
+  <h2>Event Team Dashboard</h2>
+
+  <div class="dashboard-grid">
+    <div class="card" onclick="go('event_request.html')">Request Venue</div>
+    <div class="card" onclick="go('event_status.html')">Request Status</div>
+  </div>
+
+  <div class="footer-action">
+    <button class="danger small" onclick="logout()">Logout</button>
+  </div>
+</div>
+
+<script type="module" src="login.js"></script>
+<script>
+  function go(page) {
+    window.location.href = page;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Event Users</title>
+  <link rel="stylesheet" href="s.css" />
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <h2> Event Users</h2>
+  <button class="logout-btn" id="backBtn">← Back</button>
+</div>
+
+<div class="dashboard">
+
+  <!-- CREATE USER -->
+  <div class="dashboard-card">
+    <h3>Create Event Team User</h3>
+
+    <input id="email" type="email" placeholder="Email (event@college.edu)">
+
+    <!-- Password with toggle -->
+    <div class="password-wrapper">
+  <input id="password" type="password" placeholder="Temporary Password">
+  <button id="togglePassword" type="button" class="eye-btn">👁</button>
+</div>
+
+
+    <button id="createUserBtn">Create User</button>
+    <p id="msg"></p>
+  </div>
+
+  <br>
+
+  <!-- VIEW USERS -->
+  <div class="dashboard-card">
+    <h3>Existing Event Team Users</h3>
+    <ul id="userList"></ul>
+  </div>
+
+</div>
+
+<script type="module" src="admin_users.js"></script>
+</body>
+</html>

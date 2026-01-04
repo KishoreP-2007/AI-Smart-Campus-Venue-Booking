@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <h2>AI-Smart Campus Venue Booking • Admin</h2>
+</div>
+
+<div class="dashboard">
+
+  <!-- LOGIN CARD -->
+  <div class="dashboard-card" style="max-width: 420px; margin: 100px auto;">
+
+    <h3>Admin Login</h3>
+
+    <input id="email" placeholder="Admin Email">
+
+    <!-- Login password -->
+    <div class="password-wrapper">
+      <input id="password" type="password" placeholder="Password">
+      <button type="button" class="eye-btn" onclick="toggle('password')">👁</button>
+    </div>
+
+    <div class="center-btn">
+      <button onclick="loginAdmin()">Login</button>
+    </div>
+
+    <p class="link-text" onclick="toggleReset()">Reset Password</p>
+
+    <!-- RESET PASSWORD -->
+    <div id="resetBox" style="display:none; margin-top:15px;">
+
+      <div class="password-wrapper">
+        <input id="oldPassword" type="password" placeholder="Old Password">
+        <button type="button" class="eye-btn" onclick="toggle('oldPassword')">👁</button>
+      </div>
+
+      <div class="password-wrapper">
+        <input id="newPassword" type="password" placeholder="New Password">
+        <button type="button" class="eye-btn" onclick="toggle('newPassword')">👁</button>
+      </div>
+
+      <div class="center-btn">
+        <button class="outline" onclick="resetPassword()">Update Password</button>
+      </div>
+
+    </div>
+
+    <p id="msg"></p>
+
+    <div class="footer-action">
+      <a href="index.html">← Back</a>
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="admin_login.js"></script>
+
+<h2>login with demo email : admin@college.edu</h2>
+<h2>Password : admin123</h2>
+</body>
+</html>

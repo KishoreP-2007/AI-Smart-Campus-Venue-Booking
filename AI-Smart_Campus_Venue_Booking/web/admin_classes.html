@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Regular Class Schedule</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <h2> Regular Class Schedule</h2>
+  <button class="logout-btn" onclick="goBack()">← Back</button>
+</div>
+
+<div class="dashboard">
+
+  <!-- ADD CLASS CARD -->
+  <div class="dashboard-card">
+    <h3>Add Class Schedule</h3>
+
+    <input id="block" placeholder="Block (A/B/C)">
+    <input id="venueId" placeholder="Venue ID (A-CR-1)">
+    <input id="course" placeholder="Course Name">
+    <input id="day" placeholder="Day (Monday)">
+    <input id="startTime" placeholder="Start Time (09:00)">
+    <input id="endTime" placeholder="End Time (11:00)">
+
+    <div class="center-btn">
+      <button onclick="addClass()">Add Schedule</button>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- SPLIT LAYOUT INSIDE CARD -->
+  <div class="dashboard-card">
+
+    <h3>View Class Schedules</h3>
+
+    <div class="split-layout">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h4>Blocks</h4>
+        <button class="outline small" onclick="filterBlock('ALL')">All</button>
+        <button class="outline small" onclick="filterBlock('A')">Block A</button>
+        <button class="outline small" onclick="filterBlock('B')">Block B</button>
+        <button class="outline small" onclick="filterBlock('C')">Block C</button>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <h4>Schedules</h4>
+        <div id="classList"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="admin_classes.js"></script>
+</body>
+</html>

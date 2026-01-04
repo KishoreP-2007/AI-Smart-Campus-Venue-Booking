@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Venue Requests</title>
+  <link rel="stylesheet" href="s.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <h2> Venue Requests</h2>
+  <button class="logout-btn" onclick="goBack()">← Back</button>
+</div>
+
+<div class="dashboard">
+
+  <!-- REQUEST MANAGEMENT CARD -->
+  <div class="dashboard-card">
+    <h3>Manage Venue Requests</h3>
+    <p class="subtitle">Filter and manage requests by status</p>
+
+    <div class="split-layout">
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h4>Status</h4>
+        <button class="outline small" onclick="filterStatus('ALL')">All</button>
+        <button class="outline small" onclick="filterStatus('pending')">Pending</button>
+        <button class="outline small" onclick="filterStatus('approved')">Approved</button>
+        <button class="outline small" onclick="filterStatus('rejected')">Rejected</button>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="content-area">
+        <h4>Requests</h4>
+        <ul id="requestList"></ul>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="admin_requests.js"></script>
+</body>
+</html>
