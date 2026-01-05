@@ -13,7 +13,7 @@ import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/fi
 // 1. CONFIGURATION
 // =========================================================
 // ⚠️ PASTE YOUR CLEAN API KEY HERE
-const API_KEY = "AIzaSyCBA16ID89-r2IXaLg65Pqj_PcTOwop4xQ"; 
+const API_KEY = ".....YOUR API KEY....."; 
 
 /* ---------- AUTH GUARD ---------- */
 onAuthStateChanged(auth, (user) => {
@@ -273,4 +273,5 @@ window.submitRequest = async function () {
         console.error(err);
         if(msg) msg.innerText = "Error: " + err.message;
     }
+
 };
